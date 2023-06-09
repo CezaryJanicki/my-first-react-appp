@@ -2,7 +2,7 @@ import styles from './SearchForm.module.scss';
 
 const SearchForm = () => {
     return (
-        <form class="searchForm">
+        <form className={styles.searchForm}>
             <input type="text" class="input"/>
             <button class="button">Search</button>
         </form>

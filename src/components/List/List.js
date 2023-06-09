@@ -2,12 +2,12 @@ import styles from './List.module.scss';
 
 const List = () => {
     return (
-      <div class="list">
-          <header class="header">
-              <h2 class="title">Things to do<span>soon!</span></h2>
+      <div className={styles.list}>
+          <header className={styles.header}>
+              <h2 className={styles.title}>Things to do<span>soon!</span></h2>
           </header>
-          <p class="description">Interesting things I want to check out</p>
-          <section class="columns">
+          <p className={styles.description}>Interesting things I want to check out</p>
+          <section className={styles.columns}>
               <article>
                   <h2>Books</h2>
               </article>
