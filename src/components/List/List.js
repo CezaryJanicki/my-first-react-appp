@@ -1,11 +1,13 @@
+import styles from './List.module.scss';
+
 const List = () => {
     return (
-      <div>
-          <header>
-              <h2>Things to do<span>soon!</span></h2>
+      <div class="list">
+          <header class="header">
+              <h2 class="title">Things to do<span>soon!</span></h2>
           </header>
-          <p>Interesting things I want to check out</p>
-          <section>
+          <p class="description">Interesting things I want to check out</p>
+          <section class="columns">
               <article>
                   <h2>Books</h2>
               </article>
