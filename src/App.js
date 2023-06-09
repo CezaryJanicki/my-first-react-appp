@@ -8,14 +8,6 @@ const App = () => {
       <Hero />
       <SearchForm />
       <List />
-      <Hero />
-      <SearchForm />
-      <List />
-      <Hero />
-      <SearchForm />
-      <SearchForm />
-      <SearchForm />
-      <List />
     </div>
   );
 };
