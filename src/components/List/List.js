@@ -11,13 +11,11 @@ const List = () => {
     { id: 3, title: 'Games', icon: 'gamepad' }
   ]);
 
-  setTimeout(() => {
-    setColumns([...columns, { id: 4, title: 'Test column'}]);
-  }, 2000);
-
   useEffect(() => {
-    console.log('Columns have changed');
-}, [columns]);
+    setTimeout(() => {
+      setColumns([...columns, { id: 4, title: 'Test column'}]);
+    }, 2000);
+}, []);
 
     return (
       <div className={styles.list}>
