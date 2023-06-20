@@ -2,6 +2,7 @@ import styles from './List.module.scss';
 import Column from '../Column/Column';
 import { useState } from 'react';
 import { useEffect} from 'react';
+import shortid from 'shortid';
 
 const List = () => {
 
@@ -11,22 +12,29 @@ const List = () => {
     { id: 3, title: 'Games', icon: 'gamepad' }
   ]);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setColumns([...columns, { id: 4, title: 'Test column'}]);
-    }, 2000);
-}, []);
+  const [value, setValue] = useState('');
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    setColumns([...columns, { id: shortid(), title: value }]);
+    setValue('');
+  };
 
     return (
-      <div className={styles.list}>
-          <header className={styles.header}>
-              <h2 className={styles.title}>Things to do<span>soon!</span></h2>
-          </header>
-          <p className={styles.description}>Interesting things I want to check out</p>
-          <section className={styles.columns}>
-            {columns.map(column => <Column key={column.id} title={column.title} icon={column.icon} />)}
-          </section>
+      <><div className={styles.list}>
+        <header className={styles.header}>
+          <h2 className={styles.title}>Things to do<span>soon!</span></h2>
+        </header>
+        <p className={styles.description}>Interesting things I want to check out</p>
+        <section className={styles.columns}>
+          {columns.map(column => <Column key={column.id} title={column.title} icon={column.icon} />)}
+        </section>
       </div>
+      <form onSubmit={handleSubmit}>
+         <input type="text" value={value} onChange={e => setValue(e.target.value)}/>
+         <button>Add column</button>
+         </form>
+      </>
     );
   };
 
