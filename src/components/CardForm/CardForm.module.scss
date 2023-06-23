@@ -1,0 +1,19 @@
+@use "sass:math";
+@import '../../styles/settings.scss';
+
+.cardForm {
+    padding: 10px;
+    text-align: center;
+
+}
+
+.textInput {
+    display: flex;
+    margin: 15px;
+    justify-content: center;
+}
+
+.txt {
+    margin: 10px;
+    padding-top: 5px;
+}
