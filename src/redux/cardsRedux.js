@@ -23,7 +23,7 @@ export const getFavoriteCards = ({ cards }, isFavorite) =>
   cards.filter((card) => card.isFavorite === isFavorite);
 
 const cardsReducer = (statePart = [], action) => {
-  switch (action.type) {
+  switch(action.type) {
     case ADD_CARD:
       return [...statePart, { ...action.payload, id: shortid() }];
     case TOGGLE_CARD_FAVORITE:
