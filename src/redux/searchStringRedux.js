@@ -1,4 +1,3 @@
-
 const createActionName = actionName => `app/lists/${actionName}`;
 const UPDATE_SEARCHSTRING = createActionName('UPDATE_SEARCHSTRING');
 

@@ -3,14 +3,12 @@ import PageTitle from '../PageTitle/PageTitle.js';
 import Card from '../Card/Card.js';
 import Container from '../Container/Container.js';
 import { useSelector } from 'react-redux';
-import { getFavoriteCards } from '../../redux/cardsRedux.js';
+import { getFavoriteCards } from '../../redux/cardsRedux';
 
 const Favorite = () => {
-
   const cards = useSelector(state => getFavoriteCards(state, true));
 
   return (
-
     <div className={styles.favorite}>
       <PageTitle>Favorite</PageTitle>
       <p className={styles.subtitle}>I like it:</p>

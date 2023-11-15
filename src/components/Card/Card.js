@@ -10,28 +10,28 @@ const Card = ({title, id, isFavorite}) => {
   console.log(isFavoriteCard, title, id);
 
   const handleToggle = e => {
-      e.preventDefault();
-      if (!isFavoriteCard) {
-          setIsFavorite(true);
-          dispatch(toggleIsFavorite(id));
-      } else {
-          setIsFavorite(false);
-          dispatch(toggleIsFavorite(id));
-      }
-    };
+    e.preventDefault();
+    if (!isFavoriteCard) {
+        setIsFavorite(true);
+        dispatch(toggleIsFavorite(id));
+    } else {
+        setIsFavorite(false);
+        dispatch(toggleIsFavorite(id));
+    }
+  };
   const handleRemove = e => {
     e.preventDefault();
         dispatch(removeCard(id));
     }
 
   return (
-      <li className={styles.card}>
-        {title}
-        <div className={styles.cardIcons}>
+    <li className={styles.card}>
+      {title}
+      <div className={styles.cardIcons}>
         <span onClick={handleToggle} className={`fa fa-star-o ${clsx({[styles.cardActive]: isFavoriteCard})}`}></span>
-          <span onClick={handleRemove} className={'fa fa-trash-o'}></span>
-        </div>
-      </li>
+        <span onClick={handleRemove} className={'fa fa-trash-o'}></span>
+      </div>
+    </li>
   );
 };
 

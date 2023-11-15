@@ -1,12 +1,10 @@
 import styles from './Lists.module.scss';
-import { useSelector } from 'react-redux';
-import { getAllLists } from '../../redux/listsRedux.js';
-import { Link } from 'react-router-dom';
 import ListForm from '../ListForm/ListForm.js';
-
+import { useSelector } from 'react-redux';
+import { getAllLists } from '../../redux/listsRedux';
+import { Link } from 'react-router-dom';
 
 const Lists = () => {
-
   const lists = useSelector(getAllLists);
 
   return (

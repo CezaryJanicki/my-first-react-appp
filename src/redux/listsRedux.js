@@ -1,7 +1,7 @@
 import shortid from "shortid";
 
 export const getListById = ({lists}, listId) => lists.find(list => list.id === listId);
-export const getAllLists = (state) => {return state.lists;}
+export const getAllLists = ({ lists }) => lists;
 
 const createActionName = actionName => `app/lists/${actionName}`;
 const ADD_LIST = createActionName('ADD_LIST');

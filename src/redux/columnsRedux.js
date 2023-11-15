@@ -1,6 +1,6 @@
 import shortid from "shortid";
 
-const createActionName = actionName => `app/lists/${actionName}`;
+const createActionName = actionName => `app/columns/${actionName}`;
 const ADD_COLUMN = createActionName('ADD_COLUMN');
 
 export const addColumn = payload => ({ type: 'ADD_COLUMN', payload });

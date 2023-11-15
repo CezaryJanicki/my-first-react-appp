@@ -3,12 +3,9 @@ import PageTitle from '../PageTitle/PageTitle.js';
 
 const About = () => {
   return (
-    <div className={styles.hero}>
+    <div className={styles.about}>
       <PageTitle>About</PageTitle>
-      <p className={styles.subtitle}>
-        About this app
-
-      </p>
+      <p className={styles.subtitle}>hello</p>
     </div>
   );
 };

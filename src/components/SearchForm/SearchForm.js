@@ -11,8 +11,8 @@ const SearchForm = () => {
   const [searchString, setSearch] = useState('');
 
   const handleSubmit = e => {
-      e.preventDefault();
-      dispatch(updateSearchString({ searchString }));
+    e.preventDefault();
+    dispatch(updateSearchString({ searchString }));
   };
 
   useEffect(() => {
@@ -27,7 +27,7 @@ return (
             <span className="fa fa-search" />
         </Button>
     </form>
-);
+    );
 };
 
 export default SearchForm;

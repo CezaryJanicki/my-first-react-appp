@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Button from '../Button/Button.js';
 import TextInput from '../TextInput/TextInput.js';
 import { useDispatch } from 'react-redux';
-import { addColumn } from '../../redux/columnsRedux.js';
+import { addColumn } from '../../redux/columnsRedux';
 
 const ColumnForm = ({listId}) => {
   const dispatch = useDispatch();
@@ -25,9 +25,9 @@ const ColumnForm = ({listId}) => {
       <div className={styles.columnInputs}>
         <span className={styles.inputTitle}>Icon:</span> <TextInput value={icon} onChange={e => setIcon(e.target.value)} />
       </div>
-        <Button>
-              Add column
-        </Button>
+      <Button>
+            Add column
+      </Button>
     </form>
   );
 };

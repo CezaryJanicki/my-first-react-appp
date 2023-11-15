@@ -1,9 +1,9 @@
 import styles from './ListForm.module.scss';
-import { useState } from 'react';
 import Button from '../Button/Button.js';
 import TextInput from '../TextInput/TextInput.js';
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addList } from '../../redux/listsRedux.js';
+import { addList } from '../../redux/listsRedux';
 
 const ListForm = ({listId}) => {
   const dispatch = useDispatch();
@@ -25,9 +25,9 @@ const ListForm = ({listId}) => {
       <div className={styles.columnInputs}>
         <span className={styles.inputTitle}>Description:</span> <TextInput value={description} onChange={e => setDescription(e.target.value)} />
       </div>
-        <Button>
-              Add list
-        </Button>
+      <Button>
+        Add list
+      </Button>
     </form>
   );
 };
