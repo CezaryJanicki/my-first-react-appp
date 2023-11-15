@@ -9,14 +9,14 @@ import List from './components/List/List.js';
 const App = () => {
   return (
     <main>
-    <NavBar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/favorite" element={<Favorite />} />
-          <Route path="/list/:listId" element={<List />} />
-          <Route path="*" element={<PageNotFound />} />
-        </Routes>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/favorite" element={<Favorite />} />
+        <Route path="/list/:listId" element={<List />} />
+        <Route path="*" element={<PageNotFound />} />
+      </Routes>
     </main>
   );
 };
