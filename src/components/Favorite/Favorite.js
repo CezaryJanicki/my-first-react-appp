@@ -1,15 +1,17 @@
-import styles from './Favourites.module.scss';
+import styles from './Favorite.module.scss';
 import PageTitle from '../PageTitle/PageTitle.js';
 import Card from '../Card/Card.js';
 import Container from '../Container/Container.js';
 import { useSelector } from 'react-redux';
 import { getFavoriteCards } from '../../redux/cardsRedux.js';
 
-const Favorites = () => {
+const Favorite = () => {
+
   const cards = useSelector(state => getFavoriteCards(state, true));
 
   return (
-     <div className={styles.favorite}>
+
+    <div className={styles.favorite}>
       <PageTitle>Favorite</PageTitle>
       <p className={styles.subtitle}>I like it:</p>
       <Container>
@@ -21,4 +23,4 @@ const Favorites = () => {
   );
 };
 
-export default Favorites;
+export default Favorite;

@@ -5,9 +5,9 @@ import Container from '../Container/Container.js';;
 const Home = () => {
   return (
     <Container>
-    <Hero />
-    <Lists />
-  </Container>
+      <Hero />
+      <Lists />
+    </Container>
   );
 };
 

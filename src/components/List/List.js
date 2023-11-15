@@ -6,7 +6,8 @@ import {getListById } from '../../redux/listsRedux';
 import { getColumnsByList } from '../../redux/columnsRedux';
 import SearchForm from '../SearchForm/SearchForm.js';
 import Container from '../Container/Container.js';
-import { Navigate, useParams } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
+import { useParams } from 'react-router';
 
 const List = props => {
   const {listId} = useParams();
@@ -34,4 +35,5 @@ const List = props => {
     </Container>
   );
 };
-  export default List;
+
+export default List;
