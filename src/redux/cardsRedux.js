@@ -7,33 +7,18 @@ const REMOVE_CARD = createActionName('REMOVE_CARD');
 
 export const addCard = (payload) => ({ type: ADD_CARD, payload });
 export const removeCard = (payload) => ({ type: REMOVE_CARD, payload });
-export const toggleIsFavorite = (id) => ({
-  type: TOGGLE_CARD_FAVORITE,
-  payload: id,
-});
-export const getFilteredCards = ({ cards, searchString }, columnId) =>
-  cards.filter(
-    (card) =>
-      card.columnId === columnId &&
-      card.title
-        .toLowerCase()
-        .includes(searchString.searchString.toString().toLowerCase())
-  );
-export const getFavoriteCards = ({ cards }, isFavorite) =>
-  cards.filter((card) => card.isFavorite === isFavorite);
+export const toggleIsFavorite = (payload) => ({ type: TOGGLE_CARD_FAVORITE, payload });
+export const getFilteredCards = ({ cards, searchString }, columnId) => cards.filter(card => card.columnId === columnId && card.title.toLowerCase().includes(searchString.searchString.toString().toLowerCase()));
+export const getFavoriteCards = ({ cards }, isFavorite) => cards.filter(card => card.isFavorite === isFavorite);
 
 const cardsReducer = (statePart = [], action) => {
   switch(action.type) {
     case ADD_CARD:
       return [...statePart, { ...action.payload, id: shortid() }];
     case TOGGLE_CARD_FAVORITE:
-      return statePart.map((card) =>
-        card.id === action.payload
-          ? { ...card, isFavorite: !card.isFavorite }
-          : card
-      );
+      return statePart.map(card => (card.id === action.payload) ? { ...card, isFavorite: !card.isFavorite } : card);
     case REMOVE_CARD:
-      return [...statePart.filter((card) => card.id !== action.payload)];
+      return [...statePart.filter(card => card.id !== action.payload)];
     default:
       return statePart;
   }
