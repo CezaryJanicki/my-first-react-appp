@@ -5,13 +5,14 @@ import TextInput from '../TextInput/TextInput';
 import { useDispatch } from 'react-redux';
 import { addCard } from '../../redux/store';
 
-const CardForm = props => {
+const CardForm = ({columnId}) => {
     const dispatch = useDispatch();
     const [title, setTitle] = useState('');
 
+
     const handleSubmit = e => {
         e.preventDefault();
-        dispatch(addCard({ title: title, columnId: props.columnId }) );
+        dispatch(addCard({ title: title, columnId: columnId }) );
         setTitle('');
       };
 
