@@ -1,19 +1,24 @@
-@use "sass:math";
 @import '../../styles/settings.scss';
 
 .cardForm {
-    padding: 10px;
-    text-align: center;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  .columnInputs {
+    @media screen and (max-width: 860px) {
+      width: 100%;
+      text-align: center;
+    }
+    .inputTitle {
+      margin: 0px 10px;
+      @media screen and (max-width: 860px) {
+        display: block;
+      }
+    }
+  }
 
-}
-
-.textInput {
-    display: flex;
-    margin: 15px;
-    justify-content: center;
-}
-
-.txt {
-    margin: 10px;
-    padding-top: 5px;
 }

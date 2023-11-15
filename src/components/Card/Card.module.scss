@@ -11,11 +11,10 @@
     display: flex;
     justify-content: space-between;
     font-weight: bold;
-}
-.cardActive {
-    color: $color-dark;
-}
-
-.cardInactive {
-    color: $color-light;
+    .cardActive {
+        color: $color-warning;
+    }
+    .cardIcons {
+        span {padding: 0px 5px;}
+    }
 }

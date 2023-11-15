@@ -1,26 +1,21 @@
 import styles from './List.module.scss';
-import Column from '../Column/Column';
-import ColumnForm from '../ColumnForm/ColumnForm';
+import Column from '../Column/Column.js';
+import ColumnForm from '../ColumnForm/ColumnForm.js';
 import { useSelector } from 'react-redux';
 import {getListById } from '../../redux/listsRedux';
 import { getColumnsByList } from '../../redux/columnsRedux';
-import SearchForm from '../SearchForm/SearchForm';
-import Container from '../Container/Container';
+import SearchForm from '../SearchForm/SearchForm.js';
+import Container from '../Container/Container.js';
 import { Navigate, useParams } from 'react-router-dom';
 
 const List = props => {
-
   const {listId} = useParams();
+  const listData = useSelector(state => getListById(state, listId));
   const columns = useSelector(state => getColumnsByList(state, listId));
-  const listData = useSelector(state => getListById(state, listId))
+  if(!listData) return <Navigate to="/404" />
 
-  if (!listData) {
-    return <Navigate to="/404" />;
-  }
-
-    return (
-
-      <Container>
+  return (
+    <Container>
       <div className={styles.list}>
         <header className={styles.header}>
           <h2 className={styles.title}>{listData.title}</h2>
@@ -37,7 +32,6 @@ const List = props => {
         <ColumnForm listId={listId}/>
       </div>
     </Container>
-    );
-  };
-
+  );
+};
   export default List;

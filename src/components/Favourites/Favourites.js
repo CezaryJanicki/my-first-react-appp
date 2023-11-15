@@ -1,5 +1,5 @@
 import styles from './Favourites.module.scss';
-import PageTitle from '../PageTitle/PageTitle';
+import PageTitle from '../PageTitle/PageTitle.js';
 import Card from '../Card/Card.js';
 import Container from '../Container/Container.js';
 import { useSelector } from 'react-redux';

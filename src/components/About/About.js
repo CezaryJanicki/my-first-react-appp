@@ -1,15 +1,14 @@
 import styles from './About.module.scss';
-import PageTitle from '../PageTitle/PageTitle';
+import PageTitle from '../PageTitle/PageTitle.js';
 
 const About = () => {
   return (
-    <div>
-      <div className={styles.hero}>
-        <PageTitle>About</PageTitle>
-        <p className={styles.subtitle}>
-          Lorem Ipsum
-        </p>
-      </div>
+    <div className={styles.hero}>
+      <PageTitle>About</PageTitle>
+      <p className={styles.subtitle}>
+        About this app
+
+      </p>
     </div>
   );
 };
