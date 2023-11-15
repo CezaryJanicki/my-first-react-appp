@@ -9,15 +9,16 @@
   justify-content: center;
   align-items: center;
   .columnInputs {
-    @media screen and (max-width: 860px) {
+    @media screen and (max-width: $w860) {
       width: 100%;
       text-align: center;
     }
     .inputTitle {
       margin: 0px 10px;
-      @media screen and (max-width: 860px) {
+      @media screen and (max-width: $w860) {
         display: block;
       }
     }
   }
+
 }

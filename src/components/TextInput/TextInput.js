@@ -5,3 +5,4 @@ const TextInput = ({value, onChange,placeholder}) => {
 };
 
 export default TextInput;
+

@@ -1,12 +1,13 @@
 import styles from './List.module.scss';
+import Container from '../Container/Container.js';
 import Column from '../Column/Column.js';
 import ColumnForm from '../ColumnForm/ColumnForm.js';
-import { useSelector } from 'react-redux';
-import {getListById } from '../../redux/listsRedux';
-import { getColumnsByList } from '../../redux/columnsRedux';
 import SearchForm from '../SearchForm/SearchForm.js';
-import Container from '../Container/Container.js';
-import { Navigate, useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { getListById } from '../../redux/listsReducer';
+import { getColumnsByList } from '../../redux/columnsReducer';
+import { useParams } from 'react-router';
+import { Navigate } from 'react-router-dom';
 
 const List = props => {
   const {listId} = useParams();
@@ -34,4 +35,5 @@ const List = props => {
     </Container>
   );
 };
-  export default List;
+
+export default List;

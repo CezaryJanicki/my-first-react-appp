@@ -1,6 +1,6 @@
 @import '../../styles/settings.scss';
 
-.hero {
+.about {
   padding: $base-size;
 }
 
@@ -12,7 +12,6 @@
   font-weight: normal;
 }
 
-.subtitle {
+.title + .subtitle {
   margin-top: (- $base-size * 3);
-
 }

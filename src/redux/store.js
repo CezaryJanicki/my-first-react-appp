@@ -1,9 +1,10 @@
 import { createStore, combineReducers } from 'redux';
-import initialState from './initialState.js';
-import listsReducer from './listsRedux.js';
-import columnsReducer from './columnsRedux.js';
-import cardsReducer from './cardsRedux.js';
-import searchStringReducer from './searchStringRedux.js';
+import initialState from './initialState';
+import shortid from "shortid";
+import listsReducer from './listsReducer';
+import columnsReducer from './columnsReducer';
+import cardsReducer from './cardsReducer';
+import searchStringReducer from './searchStringReducer';
 
 const subreducers = {
   lists: listsReducer,

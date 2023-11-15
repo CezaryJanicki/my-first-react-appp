@@ -1,46 +1,62 @@
-@use "sass:math";
 @import '../../styles/settings.scss';
 
-.background {
-    background-color: darken($color-dark, 3%);
-}
 
-.wrapper {
+.navBar {
+  background-color: darken($color-dark, 3%);
+  width: 100%;
+  * {
+    font-size: 18px;
+  }
+
+  >div {
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: calc($base-size * 1.5) 0;
-}
-
-a {
-    color: $color-light;
-    text-decoration: none;
-}
-
-.icon {
-    display: flex;
-    align-items: center;
-    padding-left: $base-size;
-
-    &::before {
-        color: $color-light;
-        font-size: ($base-size * 2);
-        }
-}
-
-.main {
-    display: flex;
     flex-direction: row;
-    margin: 0;
-
-    li {
-    padding: $base-size;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .homeIconWrapper {
+    height: 60px;
     display: flex;
-    justify-content: space-between;
-    font-weight: bold;
-
+    justify-content: left;
+    flex-direction: row;
+    align-items: center;
+    width: 45%;
+    span {
+      padding-right: $base-size;
+      color: $color-warning;
+      font-size: ($base-size * 2);
+      vertical-align: middle;
+      position: relative;
+      font-size: 24px;
+      color: $color-light;
+      text-decoration: none;
+      &:hover {
+        color: $color-warning;
+      }
     }
-}
-
-.linkActive {
-    color: $color-warning;
+  }
+  .linksListWrapper {
+    height: 60px;
+    display: flex;
+    justify-content: right;
+    flex-direction: row;
+    align-items: center;
+    width: 45%;
+    li {
+      display: inline-block;
+      padding: 0 10px;
+      .linkActive {
+        color: $color-warning;
+      }
+      a {
+        color: $color-light;
+        text-decoration: none;
+        &:hover {
+          color: $color-warning;
+        }
+      }
+    }
+  }
 }

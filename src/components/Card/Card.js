@@ -1,6 +1,6 @@
 import styles from './Card.module.scss';
 import clsx from 'clsx';
-import { toggleIsFavorite, removeCard } from '../../redux/cardsRedux.js';
+import { toggleIsFavorite, removeCard } from '../../redux/cardsReducer';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 
@@ -28,7 +28,7 @@ const Card = ({title, id, isFavorite}) => {
       <li className={styles.card}>
         {title}
         <div className={styles.cardIcons}>
-        <span onClick={handleToggle} className={`fa fa-star-o ${clsx({[styles.cardActive]: isFavoriteCard})}`}></span>
+          <span onClick={handleToggle} className={`fa fa-star-o ${clsx({[styles.cardActive]: isFavoriteCard})}`}></span>
           <span onClick={handleRemove} className={'fa fa-trash-o'}></span>
         </div>
       </li>

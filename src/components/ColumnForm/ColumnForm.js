@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Button from '../Button/Button.js';
 import TextInput from '../TextInput/TextInput.js';
 import { useDispatch } from 'react-redux';
-import { addColumn } from '../../redux/columnsRedux.js';
+import { addColumn } from '../../redux/columnsReducer';
 
 const ColumnForm = ({listId}) => {
   const dispatch = useDispatch();
